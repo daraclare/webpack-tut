@@ -4,7 +4,8 @@
   "description": "Webpack tutorial",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist && webpack --watch",
+    "build": "rimraf dist && webpack",
+    "dev": "node dev-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
