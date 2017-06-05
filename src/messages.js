@@ -1,4 +1,4 @@
 module.exports = {
   hi: 'How a ya!',
-  event: 'das events is a groovy thang'
+  event: 'The event is a groovy thang'
 };

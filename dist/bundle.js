@@ -63,32 +63,104 @@
 /******/ 	__webpack_require__.p = "/dist/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {
-  hi: 'How a ya!',
-  event: 'das events = groovy'
+"use strict";
+
+
+var _messages = __webpack_require__(3);
+
+var _messages2 = _interopRequireDefault(_messages);
+
+var _button = __webpack_require__(1);
+
+var _button2 = _interopRequireDefault(_button);
+
+var _image = __webpack_require__(2);
+
+var _image2 = _interopRequireDefault(_image);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var newMessage = function newMessage() {
+  return '<p>' + _messages2.default.hi + ' ' + _messages2.default.event + '</p>' + _image2.default;
 };
+// let newMessage = () => (Button.button);
 
+var app = document.getElementById('app');
+app.innerHTML = newMessage();
+
+// Button.attachEl();
+
+if (false) {
+  module.hot.accept();
+}
 
 /***/ }),
 /* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__messages__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__messages__);
 
 
-let app = document.getElementById('app');
-app.innerHTML = __WEBPACK_IMPORTED_MODULE_0__messages___default.a.hi + ' ' + __WEBPACK_IMPORTED_MODULE_0__messages___default.a.event ;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var Button = {
+  button: '<button id="myButton">Press Me</button>',
+  attachEl: function attachEl() {
+    document.getElementById('myButton').addEventListener('click', function () {
+      console.log('clicked!');
+    });
+  }
+};
+
+exports.default = Button;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var pik = __webpack_require__(4);
+var Image = '<img src="' + pik + '" />';
+exports.default = Image;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = {
+  hi: 'How a ya!',
+  event: 'The event is a groovy thang'
+};
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/5a2173ecc81a.png";
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(0);
 
 
 /***/ })
 /******/ ]);
+//# sourceMappingURL=bundle.js.map
